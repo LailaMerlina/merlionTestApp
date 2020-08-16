@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "merliontechs",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "monolith",
+    "baseName": "Test",
+    "packageName": "merliontechs",
+    "packageFolder": "merliontechs",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjVhN2Q0ZTBmMmEwMTY0NzEyN2E4NThhNWNhNWRiYzhkNDRjZTVmOTA4NzY4MDkyNTQxNGQ1YzhhNzJlM2FlZjJmNTU5MTVhNDg4ZTRhZDg0OGRmZDM0YTM5MzUwN2UzNDU4YjgzMDg4MjExYzM5MWIyNzQ5YzQzNGM5ZjY0MDA=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1597607360157,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": ["es"],
+    "blueprints": []
+  }
+}
