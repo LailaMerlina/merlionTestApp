@@ -22,7 +22,7 @@ export const Sales = (props: ISalesProps) => {
     <div>
       <h2 id="sales-heading">
         <Translate contentKey="testApp.sales.home.title">Sales</Translate>
-        <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
+        <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity button-round" id="jh-create-entity">
           <FontAwesomeIcon icon="plus" />
           &nbsp;
           <Translate contentKey="testApp.sales.home.createLabel">Create new Sales</Translate>
@@ -62,20 +62,26 @@ export const Sales = (props: ISalesProps) => {
                   </td>
                   <td>{sales.date ? <TextFormat type="date" value={sales.date} format={APP_LOCAL_DATE_FORMAT} /> : null}</td>
                   <td className="text-right">
-                    <div className="btn-group flex-btn-group-container">
-                      <Button tag={Link} to={`${match.url}/${sales.id}`} color="info" size="sm">
+                    <div className=" flex-btn-group-container">
+                      <Button className="button-round mx-2 my-1" tag={Link} to={`${match.url}/${sales.id}`} color="info" size="sm">
                         <FontAwesomeIcon icon="eye" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.view">View</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${sales.id}/edit`} color="primary" size="sm">
+                      <Button className="button-edit mx-2 my-1" tag={Link} to={`${match.url}/${sales.id}/edit`} color="primary" size="sm">
                         <FontAwesomeIcon icon="pencil-alt" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.edit">Edit</Translate>
                         </span>
                       </Button>
-                      <Button tag={Link} to={`${match.url}/${sales.id}/delete`} color="danger" size="sm">
+                      <Button
+                        className="button-delete mx-2 my-1"
+                        tag={Link}
+                        to={`${match.url}/${sales.id}/delete`}
+                        color="danger"
+                        size="sm"
+                      >
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
                           <Translate contentKey="entity.action.delete">Delete</Translate>
