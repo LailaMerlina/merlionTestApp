@@ -1,3 +1,15 @@
 .footer {
-  height: 50px;
+  height: 60px;
+  background-color: #346b9e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .footer-style {
+    justify-content: center;
+    align-content: center;
+    p {
+      margin-top: 1rem;
+    }
+  }
 }
