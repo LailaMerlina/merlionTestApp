@@ -2,23 +2,23 @@
   "testApp": {
     "sales": {
       "home": {
-        "title": "Sales",
-        "createLabel": "Crear nuevo Sales",
-        "createOrEditLabel": "Crear o editar Sales",
-        "notFound": "Ningún Sales encontrado"
+        "title": "Ventas",
+        "createLabel": "Crear nueva venta",
+        "createOrEditLabel": "Crear o editar Venta",
+        "notFound": "Ninguna Venta encontrada"
       },
-      "created": "Un nuevo Sales ha sido creado con el identificador {{ param }}",
-      "updated": "Un Sales ha sido actualizado con el identificador {{ param }}",
-      "deleted": "Un Sales ha sido eliminado con el identificador {{ param }}",
+      "created": "Una nueva venta ha sido creada con el identificador {{ param }}",
+      "updated": "Una venta ha sido actualizada con el identificador {{ param }}",
+      "deleted": "Una venta ha sido eliminada con el identificador {{ param }}",
       "delete": {
-        "question": "¿Seguro que quiere eliminar Sales {{ id }}?"
+        "question": "¿Seguro que quiere eliminar Venta {{ id }}?"
       },
       "detail": {
-        "title": "Sales"
+        "title": "Venta número"
       },
-      "description": "Description",
-      "state": "State",
-      "date": "Date"
+      "description": "Descripción",
+      "state": "Estado",
+      "date": "Fecha"
     }
   }
 }
