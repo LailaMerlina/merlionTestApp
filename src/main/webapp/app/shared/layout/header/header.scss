@@ -38,18 +38,23 @@ Developement Ribbon
 Navbar styles
 ========================================================================== */
 .jh-navbar {
-  background-color: #353d47;
+  background-color: #346b9e;
   padding: 0.2em 1em;
+  height: 90px;
   .profile-image {
     margin: -10px 0px;
     height: 40px;
     width: 40px;
     border-radius: 50%;
   }
-  .dropdown-item.active,
+  .dropdown-item.active {
+    background-color: white;
+    color: black;
+  }
   .dropdown-item.active:focus,
   .dropdown-item.active:hover {
-    background-color: #353d47;
+    background-color: #f8f9fa;
+    color: black;
   }
   .dropdown-toggle::after {
     margin-left: 0.15em;
@@ -90,7 +95,7 @@ Navbar styles
     width: auto;
     display: inline-block;
     img {
-      height: 45px;
+      height: 55px;
     }
   }
 }
@@ -110,4 +115,8 @@ Navbar styles
   position: absolute;
   top: 0px;
   z-index: 1031;
+}
+
+.navbar-brand {
+  margin-bottom: 1rem;
 }
