@@ -2,18 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import { Button, Row, Col, Label } from 'reactstrap';
-import { AvFeedback, AvForm, AvGroup, AvInput, AvField } from 'availity-reactstrap-validation';
-import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipster';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { AvForm, AvGroup, AvInput, AvField } from 'availity-reactstrap-validation';
+import { Translate, translate } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
 import { getEntity, updateEntity, createEntity, reset } from './sales.reducer';
-import { ISales } from 'app/shared/model/sales.model';
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
 
 export interface ISalesUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    selectEmpty: {
+      marginTop: theme.spacing(2),
+    },
+  })
+);
 export const SalesUpdate = (props: ISalesUpdateProps) => {
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
@@ -53,10 +62,10 @@ export const SalesUpdate = (props: ISalesUpdateProps) => {
   };
 
   return (
-    <div>
+    <div className="div-crear">
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="testApp.sales.home.createOrEditLabel">
+          <h2 className="create-style" id="testApp.sales.home.createOrEditLabel">
             <Translate contentKey="testApp.sales.home.createOrEditLabel">Create or edit a Sales</Translate>
           </h2>
         </Col>
@@ -103,7 +112,7 @@ export const SalesUpdate = (props: ISalesUpdateProps) => {
                 </Label>
                 <AvField id="sales-date" type="date" className="form-control" name="date" />
               </AvGroup>
-              <Button tag={Link} id="cancel-save" to="/sales" replace color="info">
+              <Button className="button-edit mx-2 my-1" tag={Link} id="cancel-save" to="/sales" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">
@@ -111,7 +120,7 @@ export const SalesUpdate = (props: ISalesUpdateProps) => {
                 </span>
               </Button>
               &nbsp;
-              <Button color="primary" id="save-entity" type="submit" disabled={updating}>
+              <Button className="button-round mx-2 my-1" color="primary" id="save-entity" type="submit" disabled={updating}>
                 <FontAwesomeIcon icon="save" />
                 &nbsp;
                 <Translate contentKey="entity.action.save">Save</Translate>
